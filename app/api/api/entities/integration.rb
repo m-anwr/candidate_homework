@@ -12,7 +12,7 @@ module API
       private
 
       def joined_path
-        path = object.path
+        path = OpenStruct.new(object.path)
         [path.host, path.database, path.table].join('.')
       end
     end
